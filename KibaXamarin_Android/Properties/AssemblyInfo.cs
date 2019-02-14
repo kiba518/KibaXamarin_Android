@@ -7,7 +7,7 @@ using Android.App;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("KibaXamarin_Android")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("https://www.cnblogs.com/kiba/category/1398032.html")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("KibaXamarin_Android")]
