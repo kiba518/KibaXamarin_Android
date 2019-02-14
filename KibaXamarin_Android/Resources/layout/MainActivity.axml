@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KibaXamarin_Android"
+                android:textColor="#ffffffff" />
+            <ImageView
+                android:src="@drawable/ic_arrow_down"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+            <ImageButton
+                android:src="@drawable/toolbar_upload_photo_normal"
+                android:layout_gravity="right|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_weight" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/search_bar_background"
+        android:padding="6.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="left|center"
+            android:id="@+id/btn_search"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:hint="\u0020Click Me"
+            android:drawableLeft="@drawable/ic_btn_search"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+    <GridView
+        android:paddingTop="20dip"
+        android:gravity="center"
+        android:id="@+id/my_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_marginTop="0.0dip"
+        android:horizontalSpacing="10.0dip"
+        android:verticalSpacing="20.0dip"
+        android:stretchMode="columnWidth"
+        android:columnWidth="60.0dip"
+        android:numColumns="3"
+        android:layout_weight="1.0"
+        style="@style/CustomGridView" />
+</LinearLayout>
