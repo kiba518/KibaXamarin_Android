@@ -7,10 +7,10 @@ namespace KibaXamarin_Android
 {
     [Activity(Label = "KibaXamarin_Android", MainLauncher = true)]
     public class MainActivity : BaseActivity
-    { 
+    {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);  
+            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.MainActivity);
             //Button btn_search = this.FindControl<Button>("btn_search");
             //btn_search.Click += (s, e) =>
@@ -18,13 +18,14 @@ namespace KibaXamarin_Android
             //    this.ShowToast("Click Me");
             //};
             Button btn_search = this.FindControl<Button>("btn_search", () => { this.ShowToast("Click Me"); });
-            //IListAdapter adapter = new GridAdapter(this, this.Resources);
-            //GridView my_grid = this.FindControl<GridView>("my_grid");
-            //my_grid.SetAdapter(adapter);//配置适配器
-            //my_grid.ItemClick += (s, e) =>
-            //{
-            //    this.ShowToast("Click Me" + e.Id);
-            //};
+
+            GridView my_grid = this.FindControl<GridView>("my_grid");
+            IListAdapter adapter = new GridAdapter(this);
+            my_grid.Adapter = adapter;//配置适配器
+            my_grid.ItemClick += (s, e) =>
+            {
+                this.ShowToast("Click Me" + e.Id);
+            };
         }
     }
 

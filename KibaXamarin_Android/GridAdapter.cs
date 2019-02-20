@@ -16,9 +16,9 @@ namespace KibaXamarin_Android
         private DisplayMetrics localDisplayMetrics;
         private LayoutInflater inflater;
         private Resources resources;
-        public GridAdapter(Context context, Resources _resources)
+        public GridAdapter(Context context)
         {
-            resources = _resources;
+            resources = context.Resources;
             localDisplayMetrics = resources.DisplayMetrics;
             inflater = LayoutInflater.From(context);
         }
